@@ -2,7 +2,7 @@
 
 
 
-The repository is the api for the visualization charts on taiwan cdc open data portal (the following image). The visualization api consists of two types, php-mysql-based and nodejs-redis-based ones. The php-mysql-based api is accessed over http/https on port 80/443. The nodejs-redis-based api is accessed over http/https on port 8080/8080. The php-mysql-based api is directly accessing the mysql database which is updated by a task scheduler generating the data ([jiankaiwang/tcdc_opendata_visualization_data](https://github.com/jiankaiwang/tcdc_opendata_visualization_data)).
+The repository is the API for the visualization charts on Taiwan CDC open data portal (the following image). The visualization api consists of two types, php-mysql-based and nodejs-redis-based ones. The php-mysql-based api is accessed over http/https on port 80/443. The nodejs-redis-based api is accessed over http/https on port 8080/8080. The php-mysql-based api is directly accessing the mysql database which is updated by a task scheduler generating the data ([jiankaiwang/tcdc_opendata_visualization_data](https://github.com/jiankaiwang/tcdc_opendata_visualization_data)).
 
 All the api is designed as the **GET** operation and the content type is **application/json**.
 
@@ -11,6 +11,12 @@ All the api is designed as the **GET** operation and the content type is **appli
 
 
 ## Step
+
+* Git clone the repository.
+
+```shell
+$ git clone https://github.com/jiankaiwang/tcdc_opendataapi_php.git
+```
 
 * Edit the **config.php** and fill the mysql configuration.
 
@@ -28,7 +34,7 @@ $mysqldb = 'dbname';
 
 ```shell
 # take apache server as the example
-sudo mv /path/opendataplatform /var/www/html
+sudo mv /path/tcdc_opendataapi_php /var/www/html/opendataplatform
 ```
 
 * [optional] Secure the api (take Let's encrypt as the example).
